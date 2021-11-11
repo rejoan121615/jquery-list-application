@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!-- header style  -->
+        <header>
+            <div class="nav">
+                <h1>Jquery-posts</h1>
+                <a class="btn" href="./index.html">Home</a>
+            </div>
+        </header>
+        <!-- post container  -->
+        <div id="new-post">
+          <div class="container">
+            <h1>Post your article</h1>
+            <!-- new post content  -->
+            <form action="post" id="new_post_data">
+              <!-- input group  -->
+              <div class="input-group">
+                <label for="post-title">Tittle</label>
+                <input type="text" name="title" id="post-tittle">
+              </div>
+              <!-- input group  -->
+              <div class="input-group">
+                <label for="post-content">Post content</label>
+                <textarea id="post-content" name="content" id="" cols="30" rows="10"></textarea>
+              </div>
+              <!-- input group  -->
+              <div class="input-group">
+                <button class="btn">submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- js file  -->
+        <script defer src="./js/jquery-3.6.0.min.js"></script>
+        <script defer src="./js/script.js"></script>
+    </body>
+</html>

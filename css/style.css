@@ -28,10 +28,17 @@ header .nav {
 }
 header .nav h1 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
-header .nav button {
+@media only screen and (min-width: 500px) {
+  header .nav h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.btn {
+  text-decoration: none;
   background-color: #40e0d0;
   color: white;
   border-radius: 8px;
@@ -39,10 +46,11 @@ header .nav button {
   border: 1px solid #484848;
   font-weight: bold;
   font-size: 1.1rem;
+  text-transform: capitalize;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
-header .nav button:hover {
+.btn:hover {
   background-color: #051c1a;
 }
 
@@ -87,12 +95,16 @@ header .nav button:hover {
 }
 #main-container .posts h1 {
   font-size: 1.6rem;
-  margin-bottom: 12px;
 }
 #main-container .posts .para {
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 145%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#main-container .posts .para .screen-reader-text {
+  display: none;
 }
 #main-container .posts .bottom {
   display: flex;
@@ -116,6 +128,53 @@ header .nav button:hover {
 #main-container .posts .bottom .right p {
   font-weight: bold;
   text-transform: capitalize;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1720px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+#new-post {
+  margin-top: 65px;
+  margin-bottom: 150px;
+}
+#new-post .container {
+  max-width: 500px;
+}
+#new-post form {
+  display: flex;
+  flex-flow: column wrap;
+}
+#new-post form .input-group {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 20px;
+}
+#new-post form .input-group label {
+  margin-bottom: 10px;
+}
+#new-post form .input-group input, #new-post form .input-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
