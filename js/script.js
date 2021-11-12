@@ -42,33 +42,4 @@ $(document).ready(function () {
 });
 
 // new post form
-$("#new_post_data").submit(function (event) {
-  const formData = $(this).serializeArray();
-    let constUrl = `http://localhost:10010/wp-json/wp/v2/posts/?${formData[0].name}=${formData[0].value}&${formData[1].name}=${formData[1].value}&status=publish`;
-    $.ajax({
-        url: constUrl,
-        type: "POST",
-        timeout: 0,
-        headers: {
-            Authorization: "Basic YWRtaW46YWRtaW4=",
-        },
-    }).done(function (message) {
-      console.log('request done successfully => ', message);
-    })
 
-    event.preventDefault();
-    // ajax request
-    // var settings = {
-    //     url: "http://localhost:10010/wp-json/wp/v2/posts/?title=Basic authentication from Mohd-Rejoan&content=My content from for this post&status=publish",
-    //     asdsf: `http://localhost:10010/wp-json/wp/v2/posts/?title=`,
-    //     method: "POST",
-    //     timeout: 0,
-    //     headers: {
-    //         Authorization: "Basic YWRtaW46YWRtaW4=",
-    //     },
-    // };
-
-    // $.ajax(settings).done(function (response) {
-    //     console.log(response);
-    // });
-});
