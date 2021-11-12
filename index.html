@@ -4,22 +4,90 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Blog Posts</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-      <!-- header style  -->
-      <header>
-        <div class="nav"> 
-          <h1>Jquery-posts</h1>
-          <a class="btn" href="./new-post.html">Add new post</a>
-        </div>
-      </header>
-      <!-- post container  -->
-        <div id="main-container">
-        </div>
-        <!-- js file  -->
-        <script defer src="./js/jquery-3.6.0.min.js"></script>
-        <script defer src="./js/script.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- brand icon  -->
+                <a class="navbar-brand" href="#"
+                    ><img src="./img/logo.png" alt="website-d-logo"
+                /></a>
+                <!-- responsive nav btn  -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navigation  -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">New Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- user menu  -->
+                <div class="userdropdown">
+                    <!-- <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown button
+                    </button> -->
+                    <!-- user menu  -->
+                    <div class="user-menu">
+                      <img src="./img/use-head.png" alt="user head">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown button
+                    </button>
+                    </div>
+                    <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                    >
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- js links  -->
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
