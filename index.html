@@ -5,19 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blog Posts</title>
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3" id="header">
             <div class="container">
                 <!-- brand icon  -->
-                <a class="navbar-brand" href="#"
+                <a class="navbar-brand order-2" href="#"
                     ><img src="./img/logo.png" alt="website-d-logo"
                 /></a>
                 <!-- responsive nav btn  -->
                 <button
-                    class="navbar-toggler"
+                    class="navbar-toggler order-3"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
@@ -29,7 +29,7 @@
                 </button>
                 <!-- navigation  -->
                 <div
-                    class="collapse navbar-collapse"
+                    class="collapse navbar-collapse order-4"
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,48 +42,29 @@
                     </ul>
                 </div>
                 <!-- user menu  -->
-                <div class="userdropdown">
-                    <!-- <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton1"
+                <div class="userdropdown order-1">
+                    <div
+                        class="user-profile dropdown-toggle text-center"
+                        id="user-dropdown"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        Dropdown button
-                    </button> -->
-                    <!-- user menu  -->
-                    <div class="user-menu">
-                      <img src="./img/use-head.png" alt="user head">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Dropdown button
-                    </button>
+                        <!-- user image wrapper  -->
+                        <div class="img-wrap">
+                            <img class="w-100" src="./img/use-head.png" alt="user images" />
+                        </div>
                     </div>
-                    <ul
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton1"
-                    >
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+
+                    <!-- user menu  -->
+                    <ul class="dropdown-menu right-0" aria-labelledby="user-dropdown">
+                        <li><a class="dropdown-item text-capitalize" href="#">profile</a></li>
                         <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >Something else here</a
-                            >
+                            <a class="dropdown-item text-capitalize" href="#">log out</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-
 
         <!-- js links  -->
         <script src="./js/bootstrap.bundle.min.js"></script>
