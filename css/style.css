@@ -10,12 +10,37 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .post-container .row .card,
+.home-post-container .row .card {
+    width: 47.5%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .post-container .row .card,
+.home-post-container .row .card {
+    width: 32%;
+  }
+}
+
 .text-bold {
   font-weight: bold;
 }
 
 .position-lg-relative {
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  #home-main-section .highlight-post img {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #home-main-section .highlight-post .card-body {
+    width: 47%;
+    flex-grow: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

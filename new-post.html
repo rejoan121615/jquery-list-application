@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog Posts</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-light py-3"
+            id="header"
+        >
+            <div class="container">
+                <!-- brand icon  -->
+                <a class="navbar-brand order-2" href="./index.html"
+                    ><img src="./img/logo.png" alt="website-d-logo"
+                /></a>
+                <!-- responsive nav btn  -->
+                <button
+                    class="navbar-toggler order-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navigation  -->
+                <div
+                    class="collapse navbar-collapse order-4 flex-grow-0"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="./posts.html" class="nav-link text-bold">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./new-post.html" class="nav-link text-bold">New Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- user menu  -->
+                <div
+                    class="userdropdown order-1 order-lg-5 position-lg-relative"
+                >
+                    <div
+                        class="user-profile dropdown-toggle text-center"
+                        id="user-dropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <!-- user image wrapper  -->
+                        <div class="img-wrap">
+                            <img
+                                class="w-100"
+                                src="./img/use-head.png"
+                                alt="user images"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- user menu  -->
+                    <ul class="dropdown-menu" aria-labelledby="user-dropdown">
+                        <li>
+                            <a class="dropdown-item text-capitalize" href="#"
+                                >profile</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item text-capitalize" href="#"
+                                >log out</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- create new post form  -->
+        <section id="new-post">
+          <div class="container">
+            
+          </div>
+        </section>
+        <!-- footer  -->
+        <footer class="py-3 bg-primary">
+            <div class="container">
+                <h4 class="text-center text-white text-capitalize">Test wordpress-api project developed by mohd rejoan</h4>
+            </div>
+        </footer>
+
+        <!-- js links  -->
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

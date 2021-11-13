@@ -1,19 +1,15 @@
-@mixin resp ($width) {
+@mixin resp($width) {
     @media only screen and (min-width: $width) {
         @content;
     }
 }
 
-
-// break points 
-$sm:576px;
-$md:768px;
-$lg:992px;
-$xl:1200px;
-$xxl:1400px;
-
-
-
+// break points
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 #header {
     .container {
@@ -23,7 +19,7 @@ $xxl:1400px;
             }
         }
 
-        // user menu 
+        // user menu
         .userdropdown {
             #user-dropdown {
                 .img-wrap {
@@ -31,15 +27,29 @@ $xxl:1400px;
                 }
             }
         }
-        // drop down menu 
+        // drop down menu
         .dropdown-menu {
-            @include resp ($lg) {
-                left: -60px!important;
+            @include resp($lg) {
+                left: -60px !important;
             }
         }
     }
 }
 
+// post container page
+.post-container,
+.home-post-container {
+    .row {
+        .card {
+            @include resp($md) {
+                width: 47.5%;
+            }
+            @include resp($lg) {
+                width: 32%;
+            }
+        }
+    }
+}
 
 .text-bold {
     font-weight: bold;
@@ -47,4 +57,22 @@ $xxl:1400px;
 
 .position-lg-relative {
     position: relative;
+}
+
+// index page
+// highlight post
+#home-main-section {
+    .highlight-post {
+        img {
+            @include resp($md) {
+                width: 50%;
+            }
+        }
+        .card-body {
+            @include resp($md) {
+                width: 47%;
+                flex-grow: 0;
+            }
+        }
+    }
 }
