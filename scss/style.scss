@@ -1,3 +1,20 @@
+@mixin resp ($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+
+// break points 
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+
+
+
+
 #header {
     .container {
         .navbar-brand {
@@ -14,5 +31,20 @@
                 }
             }
         }
+        // drop down menu 
+        .dropdown-menu {
+            @include resp ($lg) {
+                left: -60px!important;
+            }
+        }
     }
+}
+
+
+.text-bold {
+    font-weight: bold;
+}
+
+.position-lg-relative {
+    position: relative;
 }

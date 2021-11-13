@@ -4,5 +4,18 @@
 #header .container .userdropdown #user-dropdown .img-wrap {
   width: 55px;
 }
+@media only screen and (min-width: 992px) {
+  #header .container .dropdown-menu {
+    left: -60px !important;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.position-lg-relative {
+  position: relative;
+}
 
 /*# sourceMappingURL=style.css.map */
