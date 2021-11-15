@@ -89,23 +89,54 @@
         <!-- create new post form  -->
         <section id="log-in">
             <div class="container my-5 py-5">
-                <form id="new-post-form" method="post">
+                <form id="log-in-form" action="index.html">
                     <legend class="text-center">Log in yourself</legend>
                     <!-- post title  -->
                     <div class="input-group d-flex flex-column mb-4 pt-4">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control w-100" />
+                        <label for="name" class="form-label">User Name</label>
+                        <input
+                            type="text"
+                            class="form-control w-100"
+                            id="user-name"
+                            value=""
+                        />
                     </div>
-                    <!-- user name  -->
+                    <!-- password  -->
                     <div class="input-group d-flex flex-column mb-4">
-                        <label for="name" class="form-label">User name</label>
-                        <input type="text" class="form-control w-100" />
+                        <label for="name" class="form-label">Password</label>
+                        <input
+                            type="password"
+                            class="form-control w-100"
+                            id="password"
+                            value=""
+                        />
                     </div>
                     <!-- submit btn  -->
-                    <div class="input-group d-flex flex-column mb-4">
-                        <button type="button" class="btn btn-success text-center">Log In</button>
-                    </div>
+                    <input type="submit" class="btn btn-primary" value="submit" disabled id="submit">
                 </form>
+                <!-- log in success full massage  -->
+                <div
+                    id="log-in-success-msg"
+                    class="
+                        d-none
+                        success-full-msg
+                        card
+                        py-4
+                        w-50
+                        mx-auto
+                        align-items-center
+                    "
+                >
+                    <img
+                        src="./img/check-mark.png"
+                        alt="login success img"
+                        class="text-center mb-4"
+                        style="width: 85px"
+                    />
+                    <h5 class="text-dark text-center text-capitalize">
+                        Log-in Successfull
+                    </h5>
+                </div>
             </div>
         </section>
         <!-- footer  -->
