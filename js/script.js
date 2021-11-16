@@ -12,6 +12,8 @@ function addColor(tag) {
     }
 }
 
+// map all login input for error massage
+
 $.map(loginInputList, function (items, index) {
     // check input value
     $(items).focus(function () {
@@ -44,16 +46,18 @@ function sendRequest() {
         }),
     })
         .done(function (respData, textStatus, jqXHR) {
-            window.localStorage.setItem("token", respData.token);
             $("#log-in #log-in-form").fadeOut(500);
             $("#log-in-success-msg").fadeIn(500);
             setTimeout(function () {
                 window.location.href = "index.html";
-            }, 2500);
+            }, 1500);
+            // resp data loop
+            Object.keys(respData).forEach((item) => {
+                localStorage.setItem(item, respData[item]);
+            });
         })
         .fail(function (jqHRX, textStatus, error) {
             $(".user-error-msg").remove();
-            console.log(jqHRX);
             $("#log-in .container").append(
                 `<p class="text-center text-danger text-capitalize mt-5 user-error-msg">${jqHRX.responseJSON.message}</p>`
             );
@@ -66,4 +70,20 @@ $("#log-in-form #submit").click(function (e) {
     sendRequest();
 });
 
-// show user area
+// show user area or login btns
+
+if (localStorage.token) {
+    $("#user-dropdown").show();
+    $("#log-register-btns").hide();
+}
+if (localStorage.getItem("token") == null) {
+    $("#user-dropdown").hide();
+    $("#log-register-btns").show();
+}
+
+// logout btn
+console.log($("#log-out-btn"));
+$("#log-out-btn").click(function () {
+    localStorage.clear();
+    window.location.href = "index.html";
+});
