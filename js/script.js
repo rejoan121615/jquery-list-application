@@ -51,7 +51,13 @@ function sendRequest() {
                 window.location.href = "index.html";
             }, 2500);
         })
-        .fail(function (jqHRX, textStatus, error) {});
+        .fail(function (jqHRX, textStatus, error) {
+            $(".user-error-msg").remove();
+            console.log(jqHRX);
+            $("#log-in .container").append(
+                `<p class="text-center text-danger text-capitalize mt-5 user-error-msg">${jqHRX.responseJSON.message}</p>`
+            );
+        });
 }
 
 // on submit btn click
@@ -60,5 +66,4 @@ $("#log-in-form #submit").click(function (e) {
     sendRequest();
 });
 
-
-// show user area 
+// show user area
