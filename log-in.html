@@ -89,7 +89,7 @@
         <!-- create new post form  -->
         <section id="log-in">
             <div class="container my-5 py-5">
-                <form id="log-in-form" action="index.html">
+                <form id="log-in-form">
                     <legend class="text-center">Log in yourself</legend>
                     <!-- post title  -->
                     <div class="input-group d-flex flex-column mb-4 pt-4">
@@ -112,19 +112,18 @@
                         />
                     </div>
                     <!-- submit btn  -->
-                    <input type="submit" class="btn btn-primary" value="submit" disabled id="submit">
+                    <button type="submit" class="btn btn-primary" disabled id="submit">submit</button>
                 </form>
                 <!-- log in success full massage  -->
                 <div
                     id="log-in-success-msg"
                     class="
-                        d-none
                         success-full-msg
                         card
                         py-4
                         w-50
                         mx-auto
-                        align-items-center
+                        text-center
                     "
                 >
                     <img
